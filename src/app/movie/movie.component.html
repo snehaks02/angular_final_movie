@@ -1,0 +1,84 @@
+<div class="search-bar">
+  <div class="search-input">
+    <input type="text" placeholder="Search movies" [(ngModel)]="searchQuery" (ngModelChange)="searchMovies($event)">
+  </div>
+  <button class="search-button" (click)="searchMovies(searchQuery)">Search</button>
+</div>
+
+<div class="movie-card-container" *ngIf="showContainer">
+  <ng-container *ngIf="filteredMovies.length > 0; else noResults">
+    <div *ngFor="let movie of filteredMovies" class="movie-card" (click)="openMovieDetails(movie)">
+      <div class="poster">
+        <img [src]="movie.Poster" alt="{{ movie.Title }} Poster">
+      </div>
+      <div class="movie-info">
+        <h2>{{ movie.Title }}</h2>
+        <p>Release Year: {{ movie.Year }}</p>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #noResults>
+    <p>{{ noResultsMessage }}</p>
+  </ng-template>
+
+  
+  <button *ngIf="filteredMovies.length >= itemsPerPage && !loadingMore" class="load-more-button" (click)="loadMoreResults()">Load More</button>
+  <div *ngIf="loadingMore" class="loading-indicator">Loading more...</div>
+</div>
+
+
+<div *ngIf="detailedmovie">
+
+  <app-movie-details [movie]="detailedmovie" (goBackEvent)="handleGoBack()"></app-movie-details>
+</div>
+<!-- 
+<button *ngIf="detailedmovie" class="go-back-button" (click)="handleGoBack()">Go Back</button> -->
+
+
+
+
+
+
+<!-- <div class="search-bar">
+  <div class="search-input">
+    <input type="text" placeholder="Search movies" [(ngModel)]="searchQuery" (ngModelChange)="searchMovies($event)">
+  </div>
+  <button class="search-button" (click)="searchMovies(searchQuery)">Search</button>
+</div>
+
+<div class="movie-card-container" *ngIf="showContainer">
+  <ng-container *ngIf="filteredMovies.length > 0; else noResults">
+    <div *ngFor="let movie of filteredMovies" class="movie-card" (click)="openMovieDetails(movie)">
+      <div class="poster">
+        <img [src]="movie.Poster" alt="{{ movie.Title }} Poster">
+      </div>
+      <div class="movie-info">
+        <h2>{{ movie.Title }}</h2>
+        <p>Release Year: {{ movie.Year }}</p>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #noResults>
+    <p>{{ noResultsMessage }}</p>
+  </ng-template>
+
+  <button *ngIf="filteredMovies.length >= itemsPerPage && !loadingMore" class="load-more-button" (click)="loadMoreResults()">Load More</button>
+  <div *ngIf="loadingMore" class="loading-indicator">Loading more...</div>
+</div>
+<div *ngIf="!showContainer">
+  <app-movie-details [movie]="detailedmovie"></app-movie-details>
+</div> -->
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+

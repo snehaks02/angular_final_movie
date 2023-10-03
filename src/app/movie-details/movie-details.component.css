@@ -1,0 +1,77 @@
+/* movie-details.component.css */
+
+/* Overall page styling */
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Background color for the entire page */
+    color: #333; /* Text color */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Ensure the background covers the entire viewport height */
+  }
+  
+  /* Movie details container */
+  .movie-details-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Background color for the movie details container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for the container */
+    max-width: 600px; /* Limit the width of the container */
+    margin: 20px auto; /* Center the container horizontally and provide spacing */
+  }
+  
+  /* Movie details text */
+  .movie-details h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .movie-details p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Back button */
+  .back-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  .movie-details h2 {
+    font-size: 2.5rem; /* Larger font size for movie title */
+    margin-bottom: 10px; /* Add some space at the bottom */
+    font-weight: 600; /* Bolder font weight */
+  }
+  
+  .movie-details p {
+    font-size: 1.4rem; /* Increased font size for movie details */
+    margin-bottom: 20px;
+  }  
+
+
+.go-back-button {
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none;
+    cursor: pointer; 
+  }
+  
+  .go-back-button:hover {
+    background-color: #0056b3; 
+  }
+  
+   
